@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE cosasPorHacer [
-<!ELEMENT cosasPorHacer (cosa)>
-<!ELEMENT cosa EMPTY>
+<!ELEMENT cosasPorHacer (cosa*)>
+<!ELEMENT cosa (#PCDATA)>
 <!ATTLIST cosa fecha CDATA #REQUIRED>
 <!ATTLIST cosa asunto CDATA #REQUIRED>
 <!ATTLIST cosa fechaLimite CDATA #REQUIRED>
 ]>
 <cosasPorHacer>
-<cosa fecha="20 de febrero de 2011" fechaLimite="1 de marzo de 2011">
+<cosa fecha="20 de febrero de 2011" asunto="importante"  fechaLimite="1 de marzo de 2011">
 Preparar ejercicios de DTDs</cosa>
-<cosa fecha="21 de febrero de 2011" fechaLimite="5 de marzo de 2011">
+<cosa fecha="21 de febrero de 2011" asunto="proyecto" fechaLimite="5 de marzo de 2011">
 Preparar tema XSLT</cosa>
 </cosasPorHacer>
+
+<!-- en este caso asignamos el * porque hay más de una ocurrencia  y cambiamos el empty por #PCDATA ya que no está vacio y añdimos el atributo asunto-->
