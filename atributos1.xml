@@ -7,6 +7,9 @@
 <!ATTLIST cuadro comentario CDATA #IMPLIED>
 ]>
 <cuadros>
-<cuadro titulo="Adán y Eva" autor="Alberto Durero" />
-<cuadro autor="Lucas Cranach, el viejo" titulo="Adán y Eva" />
+<cuadro titulo="Adán_y_Eva" autor="Alberto Durero" comentario="es un excelente cuadro"/>
+<cuadro autor="Lucas Cranach, el viejo" titulo="Martin_Lutero" comentario="" />
 </cuadros>
+
+<!-- en este caso al tener un ID declarado como atributo no pueden tener el mismo título, además al ser un ID no puede tener espacios, y en el caso del atributo comentario
+es opcional darle el valor al atributo-->
