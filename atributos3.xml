@@ -8,11 +8,14 @@
 <!ATTLIST equipo nombre CDATA #REQUIRED>
 <!ATTLIST equipo jugadores IDREFS #IMPLIED>
 ]>
+
 <futbol>
 <jugador nombre="Alfredo Di Stéfano" codigo="ads"/>
 <jugador nombre="Edison Arantes do Nascimento" codigo="ean" />
 <jugador nombre="Diego Armando Maradona" codigo="dam" />
 <jugador nombre="Johan Cruyff" codigo="jc" />
-<equipo nombre="Società Sportiva Calcio Napoli" jugadores="Maradona" />
-<equipo nombre="Futbol Club Barcelona" jugadores="Cruyff, Maradona" />
+<equipo nombre="Società Sportiva Calcio Napoli" jugadores="dam" />
+<equipo nombre="Futbol Club Barcelona" jugadores="jc dam" />
 </futbol>
+
+<!-- en este caso se emplea un atributo para referenciar otro elemento con IDREFS, asignamos al atributo jugadores el valor del codigo del jugador-->
